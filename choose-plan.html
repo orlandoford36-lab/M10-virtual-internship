@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./choose-plan.css" />
+    <title>Summarist • Choose Plan</title>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Get unlimited access to many amazing books to read</h1>
+        <p class="hero__subtitle">Turn ordinary moments into amazing learning opportunities</p>
+        <img class="hero__image" src="./assets/pricing-top.png" alt="Books and reading illustration" />
+      </div>
+    </header>
+
+    <main>
+      <section class="features">
+        <div class="row">
+          <div class="features__grid">
+            <div class="feature">
+              <div class="feature__icon">★</div>
+              <p><b>Key ideas in few min</b> with many books to read</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">◔</div>
+              <p><b>3 million</b> people growing with Summarist everyday</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon">✦</div>
+              <p><b>Precise recommendations</b> collections curated by experts</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="plan">
+        <div class="row">
+          <h2 class="section__title">Choose the plan that fits you</h2>
+
+          <div class="plan__card plan__card--active" data-plan="premium-plus">
+            <div class="plan__card--circle"><span class="plan__card--dot"></span></div>
+            <div class="plan__card--content">
+              <div class="plan__card--title">Premium Plus Yearly</div>
+              <div class="plan__card--price">$99.99/year</div>
+              <div class="plan__card--text">7-day free trial included</div>
+            </div>
+          </div>
+
+          <div class="plan__separator">or</div>
+
+          <div class="plan__card" data-plan="premium">
+            <div class="plan__card--circle"></div>
+            <div class="plan__card--content">
+              <div class="plan__card--title">Premium Monthly</div>
+              <div class="plan__card--price">$9.99/month</div>
+              <div class="plan__card--text">No trial included</div>
+            </div>
+          </div>
+
+          <div class="plan__cta">
+            <button class="btn plan__btn" id="purchaseBtn" type="button">Start your free 7-day trial</button>
+            <p class="plan__disclaimer" id="planDisclaimer">Cancel your trial at any time before it ends, and you won’t be charged.</p>
+            <p class="plan__message" id="planMessage" aria-live="polite"></p>
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>How does the free 7-day trial work?</summary>
+              <p>Begin your complimentary 7-day trial with a Summarist annual membership. You are under no obligation to continue your subscription, and you will only be billed when the trial period expires.</p>
+            </details>
+            <details>
+              <summary>Can I switch subscriptions from monthly to yearly, or yearly to monthly?</summary>
+              <p>While an annual plan is active, it is not feasible to switch to a monthly plan. However, once the current month ends, transitioning from a monthly plan to an annual plan is an option.</p>
+            </details>
+            <details>
+              <summary>What's included in the Premium plan?</summary>
+              <p>Premium membership provides unrestricted entry to many best-selling books, high-quality audio, offline reading, and the option to send reads to your Kindle.</p>
+            </details>
+            <details>
+              <summary>Can I cancel during my trial or subscription?</summary>
+              <p>You will not be charged if you cancel your trial before its conclusion. While you will not have complete access to the entire library, you can still expand your knowledge with one curated book per day.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer__top--wrapper">
+            <div class="footer__block">
+              <div class="footer__link--title">Actions</div>
+              <div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Summarist Magazine</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Cancel Subscription</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Help</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Contact us</a></div>
+              </div>
+            </div>
+            <div class="footer__block">
+              <div class="footer__link--title">Useful Links</div>
+              <div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Pricing</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Summarist Business</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Gift Cards</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Authors &amp; Publishers</a></div>
+              </div>
+            </div>
+            <div class="footer__block">
+              <div class="footer__link--title">Company</div>
+              <div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">About</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Careers</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Partners</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Code of Conduct</a></div>
+              </div>
+            </div>
+            <div class="footer__block">
+              <div class="footer__link--title">Other</div>
+              <div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Sitemap</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Legal Notice</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Terms of Service</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Privacy Policies</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright--wrapper">
+            <div class="footer__copyright">Copyright © 2023 Summarist.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./choose-plan.js"></script>
+  </body>
+</html>

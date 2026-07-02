@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./settings.css" />
+    <title>Summarist • Settings</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <a class="sidebar__logo" href="./index.html">
+          <img src="./assets/logo.png" alt="Summarist logo" />
+        </a>
+        <nav class="sidebar__links">
+          <a class="sidebar__link" href="./for-you.html">For you</a>
+          <a class="sidebar__link" href="#">My Library</a>
+          <a class="sidebar__link sidebar__link--disabled" href="#">Highlights</a>
+          <a class="sidebar__link" href="./search.html">Search</a>
+          <a class="sidebar__link sidebar__link--active" href="./settings.html">Settings</a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a class="sidebar__link" href="#">Help & Support</a>
+          <button class="sidebar__link sidebar__button" id="logoutBtn" type="button">Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar__input--wrapper">
+            <input class="topbar__input" type="text" id="topSearchInput" placeholder="Search for books" />
+          </div>
+        </header>
+
+        <div class="row">
+          <div class="container">
+            <h1 class="section__title page__title">Settings</h1>
+
+            <div id="loadingState" class="settings__skeleton" aria-live="polite">
+              <div class="skeleton skeleton-line skeleton-w-35"></div>
+              <div class="skeleton skeleton-line skeleton-w-55"></div>
+              <div class="skeleton skeleton-line skeleton-w-35"></div>
+              <div class="skeleton skeleton-line skeleton-w-70"></div>
+            </div>
+
+            <section id="loggedOutState" class="settings__login--wrapper is-hidden">
+              <img class="settings__login--img" src="./assets/login.png" alt="Login illustration" />
+              <div class="settings__login--text">Log in to your account to see your details.</div>
+              <button class="btn settings__login--btn" id="loginBtn" type="button">Login</button>
+            </section>
+
+            <section id="loggedInState" class="settings__panel is-hidden">
+              <div class="setting__content">
+                <div class="settings__sub--title">Your Subscription plan</div>
+                <div class="settings__text" id="subscriptionStatus">Basic</div>
+                <a class="btn settings__upgrade--btn is-hidden" id="upgradeBtn" href="./choose-plan.html">Upgrade to Premium</a>
+              </div>
+
+              <div class="setting__content">
+                <div class="settings__sub--title">Email</div>
+                <div class="settings__text" id="userEmail"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="./settings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./player.css" />
+    <title>Summarist • Player</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <a class="sidebar__logo" href="./index.html">
+          <img src="./assets/logo.png" alt="Summarist logo" />
+        </a>
+        <nav class="sidebar__links">
+          <a class="sidebar__link" href="./for-you.html">For you</a>
+          <a class="sidebar__link" href="#">My Library</a>
+          <a class="sidebar__link sidebar__link--disabled" href="#">Highlights</a>
+          <a class="sidebar__link" href="./search.html">Search</a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a class="sidebar__link" href="./settings.html">Settings</a>
+          <button class="sidebar__link sidebar__button" id="logoutBtn" type="button">Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar__input--wrapper">
+            <input class="topbar__input" type="text" id="topSearchInput" placeholder="Search for books" />
+          </div>
+        </header>
+
+        <div class="row">
+          <div class="container">
+            <div id="playerLoading" class="player__loading skeleton-player">
+              <div class="skeleton skeleton-title"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-line skeleton-w-80"></div>
+              <div class="skeleton-panel">
+                <div class="skeleton skeleton-thumb"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line skeleton-w-60"></div>
+                <div class="skeleton skeleton-line"></div>
+              </div>
+            </div>
+
+            <section id="playerContent" class="player__wrapper is-hidden">
+              <div class="player__summary">
+                <h1 class="player__title" id="bookTitle"></h1>
+                <div class="player__summary-text" id="bookSummary"></div>
+              </div>
+
+              <div class="audio__wrapper">
+                <div class="audio__track--wrapper">
+                  <figure class="audio__track--image-mask">
+                    <img id="bookImage" alt="Book cover" />
+                  </figure>
+                  <div class="audio__track--details-wrapper">
+                    <div class="audio__track--title" id="trackTitle"></div>
+                    <div class="audio__track--author" id="trackAuthor"></div>
+                  </div>
+                </div>
+
+                <audio id="audioEl"></audio>
+
+                <div class="audio__controls--wrapper">
+                  <div class="audio__controls">
+                    <button class="audio__controls--btn" id="backBtn" type="button" aria-label="Skip back 10 seconds">↺10</button>
+                    <button class="audio__controls--btn audio__controls--btn-play" id="playBtn" type="button" aria-label="Play or pause">▶</button>
+                    <button class="audio__controls--btn" id="forwardBtn" type="button" aria-label="Skip forward 10 seconds">10↻</button>
+                  </div>
+                </div>
+
+                <div class="audio__progress--wrapper">
+                  <div class="audio__time" id="currentTime">00:00</div>
+                  <input class="audio__progress--bar" id="progressBar" type="range" min="0" max="0" value="0" />
+                  <div class="audio__time" id="durationTime">00:00</div>
+                </div>
+
+                <div class="audio__volume--wrapper">
+                  <label class="audio__volume--label" for="volumeBar">Volume</label>
+                  <input class="audio__volume--bar" id="volumeBar" type="range" min="0" max="100" value="100" />
+                  <button class="audio__mute--btn" id="muteBtn" type="button">Mute</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="./player.js"></script>
+  </body>
+</html>

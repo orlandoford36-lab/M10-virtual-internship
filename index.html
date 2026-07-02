@@ -7,254 +7,235 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Summarist Home Page</title>
   </head>
+
   <body>
+    <!-- NAV -->
     <nav class="nav">
       <div class="nav__wrapper">
         <figure class="nav__img--mask">
-          <img class="nav__img" src="" alt="logo" />
+          <a href="./index.html" aria-label="Go to home page">
+            <img class="nav__img" src="./assets/logo.png" alt="Summarist logo" />
+          </a>
         </figure>
+
         <ul class="nav__list--wrapper">
-          <li class="nav__list nav__list--login">Login</li>
+          <li class="nav__list nav__list--login" role="button" tabindex="0" aria-label="Open login modal">Login</li>
           <li class="nav__list nav__list--mobile">About</li>
           <li class="nav__list nav__list--mobile">Contact</li>
           <li class="nav__list nav__list--mobile">Help</li>
+          <li class="nav__list nav__list--logout is-hidden" role="button" tabindex="0" aria-label="Logout">
+            Logout
+          </li>
         </ul>
       </div>
     </nav>
+
+    <!-- LANDING -->
     <section id="landing">
       <div class="container">
         <div class="row">
           <div class="landing__wrapper">
             <div class="landing__content">
               <div class="landing__content__title">
-                Gain more knowledge <br class="remove--tablet" />
+                Gain more knowledge <br />
                 in less time
               </div>
+
               <div class="landing__content__subtitle">
-                Great summaries for busy people,
-                <br class="remove--tablet" />
-                individuals who barely have time to read,
-                <br class="remove--tablet" />
+                Great summaries for busy people,<br class="remove--tablet" />
+                individuals who barely have time to read, <br class="remove--tablet" />
                 and even people who don’t like to read.
               </div>
-              <button class="btn home__cta--btn">Login</button>
+
+              <button class="btn home__cta--btn" type="button">Login</button>
             </div>
+
             <figure class="landing__image--mask">
-              <img src="" alt="landing" />
+              <img src="./assets/landing.png" alt="Person reading with Summarist" />
             </figure>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- FEATURES -->
     <section id="features">
       <div class="container">
         <div class="row">
           <div class="section__title">Understand books in few minutes</div>
+
           <div class="features__wrapper">
             <div class="features">
               <div class="features__icon">
-                <AiFillFileText />
+                <svg viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="true">
+                  <path d="M854.6 288.7c6 6 9.4 14.1 9.4 22.6V928c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32h424.7c8.5 0 16.7 3.4 22.7 9.4l215.2 215.3zM790.2 326L602 137.8V326h188.2zM320 482a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h384a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8H320zm0 136a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h184a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8H320z" />
+                </svg>
               </div>
               <div class="features__title">Read or listen</div>
-              <div class="features__sub--title">
-                Save time by getting the core ideas from the best books.
-              </div>
+              <div class="features__sub--title">Save time by getting the core ideas from the best books.</div>
             </div>
+
             <div class="features">
               <div class="features__icon">
-                <AiFillBulb />
+                <svg viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="true">
+                  <path d="M348 676.1C250 619.4 184 513.4 184 392c0-181.1 146.9-328 328-328s328 146.9 328 328c0 121.4-66 227.4-164 284.1V792c0 17.7-14.3 32-32 32H380c-17.7 0-32-14.3-32-32V676.1zM392 888h240c4.4 0 8 3.6 8 8v32c0 17.7-14.3 32-32 32H416c-17.7 0-32-14.3-32-32v-32c0-4.4 3.6-8 8-8z" />
+                </svg>
               </div>
               <div class="features__title">Find your next read</div>
-              <div class="features__sub--title">
-                Explore book lists and personalized recommendations.
-              </div>
+              <div class="features__sub--title">Explore book lists and personalized recommendations.</div>
             </div>
+
             <div class="features">
               <div class="features__icon">
-                <AiFillAudio />
+                <svg viewBox="0 0 1024 1024" fill="currentColor" aria-hidden="true">
+                  <path d="M512 624c93.9 0 170-75.2 170-168V232c0-92.8-76.1-168-170-168s-170 75.2-170 168v224c0 92.8 76.1 168 170 168zm330-170c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 140.3-113.7 254-254 254S258 594.3 258 454c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 168.7 126.6 307.9 290 327.6V884H326.7c-13.7 0-24.7 14.3-24.7 32v36c0 4.4 2.8 8 6.2 8h407.6c3.4 0 6.2-3.6 6.2-8v-36c0-17.7-11-32-24.7-32H548V782.1c165.3-18 294-158 294-328.1z" />
+                </svg>
               </div>
               <div class="features__title">Briefcasts</div>
-              <div class="features__sub--title">
-                Gain valuable insights from briefcasts
-              </div>
+              <div class="features__sub--title">Gain valuable insights from briefcasts</div>
             </div>
           </div>
+
           <div class="statistics__wrapper">
             <div class="statistics__content--header">
               <div class="statistics__heading">Enhance your knowledge</div>
               <div class="statistics__heading">Achieve greater success</div>
               <div class="statistics__heading">Improve your health</div>
-              <div class="statistics__heading">
-                Develop better parenting skills
-              </div>
+              <div class="statistics__heading">Develop better parenting skills</div>
               <div class="statistics__heading">Increase happiness</div>
-              <div class="statistics__heading">
-                Be the best version of yourself!
-              </div>
+              <div class="statistics__heading statistics__heading--active">Be the best version of yourself!</div>
             </div>
+
             <div class="statistics__content--details">
               <div class="statistics__data">
                 <div class="statistics__data--number">93%</div>
-                <div class="statistics__data--title">
-                  of Summarist members <b>significantly increase</b> reading
-                  frequency.
-                </div>
+                <div class="statistics__data--title">of Summarist members <b>significantly increase</b> reading frequency.</div>
               </div>
               <div class="statistics__data">
                 <div class="statistics__data--number">96%</div>
-                <div class="statistics__data--title">
-                  of Summarist members <b>establish better</b> habits.
-                </div>
+                <div class="statistics__data--title">of Summarist members <b>establish better</b> habits.</div>
               </div>
               <div class="statistics__data">
                 <div class="statistics__data--number">90%</div>
-                <div class="statistics__data--title">
-                  have made <b>significant positive</b> change to their lives.
-                </div>
+                <div class="statistics__data--title">have made <b>significant positive</b> change to their lives.</div>
               </div>
             </div>
           </div>
+
           <div class="statistics__wrapper">
-            <div
-              class="statistics__content--details statistics__content--details-second"
-            >
+            <div class="statistics__content--details statistics__content--details-second">
               <div class="statistics__data">
                 <div class="statistics__data--number">91%</div>
-                <div class="statistics__data--title">
-                  of Summarist members <b>report feeling more productive</b>{"
-                  "} after incorporating the service into their daily routine.
-                </div>
+                <div class="statistics__data--title">of Summarist members <b>report feeling more productive</b> after incorporating the service into their daily routine.</div>
               </div>
               <div class="statistics__data">
                 <div class="statistics__data--number">94%</div>
-                <div class="statistics__data--title">
-                  of Summarist members have <b>noticed an improvement</b> in
-                  their overall comprehension and retention of information.
-                </div>
+                <div class="statistics__data--title">of Summarist members have <b>noticed an improvement</b> in their overall comprehension and retention of information.</div>
               </div>
               <div class="statistics__data">
                 <div class="statistics__data--number">88%</div>
-                <div class="statistics__data--title">
-                  of Summarist members <b>feel more informed</b> about current
-                  events and industry trends since using the platform.
-                </div>
+                <div class="statistics__data--title">of Summarist members <b>feel more informed</b> about current events and industry trends since using the platform.</div>
               </div>
             </div>
-            <div
-              class="statistics__content--header statistics__content--header-second"
-            >
+
+            <div class="statistics__content--header statistics__content--header-second">
               <div class="statistics__heading">Expand your learning</div>
               <div class="statistics__heading">Accomplish your goals</div>
               <div class="statistics__heading">Strengthen your vitality</div>
               <div class="statistics__heading">Become a better caregiver</div>
               <div class="statistics__heading">Improve your mood</div>
-              <div class="statistics__heading">Maximize your abilities</div>
+              <div class="statistics__heading statistics__heading--active">Maximize your abilities</div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- REVIEWS -->
     <section id="reviews">
       <div class="row">
         <div class="container">
           <div class="section__title">What our members say</div>
+
           <div class="reviews__wrapper">
             <div class="review">
               <div class="review__header">
                 <div class="review__name">Hanna M.</div>
-                <div class="review__stars">
-                  <BsStarFill />
-                </div>
+                <div class="review__stars">★★★★★</div>
               </div>
-              <div class="review__body">
-                This app has been a <b>game-changer</b> for me! It's saved me so
-                much time and effort in reading and comprehending books. Highly
-                recommend it to all book lovers.
-              </div>
+              <div class="review__body">This app has been a <b>game-changer</b> for me! It&#39;s saved me so much time and effort in reading and comprehending books. Highly recommend it to all book lovers.</div>
             </div>
+
             <div class="review">
               <div class="review__header">
                 <div class="review__name">David B.</div>
-                <div class="review__stars">
-                  <BsStarFill />
-                </div>
+                <div class="review__stars">★★★★★</div>
               </div>
-              <div class="review__body">
-                I love this app! It provides
-                <b>concise and accurate summaries</b> of books in a way that is
-                easy to understand. It's also very user-friendly and intuitive.
-              </div>
+              <div class="review__body">I love this app! It provides <b>concise and accurate summaries</b> of books in a way that is easy to understand. It&#39;s also very user-friendly and intuitive.</div>
             </div>
+
             <div class="review">
               <div class="review__header">
                 <div class="review__name">Nathan S.</div>
-                <div class="review__stars">
-                  <BsStarFill />
-                </div>
+                <div class="review__stars">★★★★★</div>
               </div>
-              <div class="review__body">
-                This app is a great way to get the main takeaways from a book
-                without having to read the entire thing.
-                <b>The summaries are well-written and informative.</b>
-                Definitely worth downloading.
-              </div>
+              <div class="review__body">This app is a great way to get the main takeaways from a book without having to read the entire thing. <b>The summaries are well-written and informative.</b> Definitely worth downloading.</div>
             </div>
+
             <div class="review">
               <div class="review__header">
                 <div class="review__name">Ryan R.</div>
-                <div class="review__stars">
-                  <BsStarFill />
-                </div>
+                <div class="review__stars">★★★★★</div>
               </div>
-              <div class="review__body">
-                If you're a busy person who
-                <b>loves reading but doesn't have the time</b> to read every
-                book in full, this app is for you! The summaries are thorough
-                and provide a great overview of the book's content.
-              </div>
+              <div class="review__body">If you&#39;re a busy person who <b>loves reading but doesn&#39;t have the time</b> to read every book in full, this app is for you! The summaries are thorough and provide a great overview of the book&#39;s content.</div>
             </div>
           </div>
+
           <div class="reviews__btn--wrapper">
-            <button class="btn home__cta--btn">Login</button>
+            <button class="btn home__cta--btn" type="button">Login</button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- NUMBERS -->
     <section id="numbers">
       <div class="container">
         <div class="row">
           <div class="section__title">Start growing with Summarist now</div>
+
           <div class="numbers__wrapper">
             <div class="numbers">
               <div class="numbers__icon">
-                <BiCrown />
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M11.219 3.375 8 7.399 4.781 3.375A1.002 1.002 0 0 0 3 4v15c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V4a1.002 1.002 0 0 0-1.781-.625L16 7.399l-3.219-4.024c-.381-.474-1.181-.474-1.562 0zM5 19v-2h14.001v2H5zm10.219-9.375c.381.475 1.182.475 1.563 0L19 6.851 19.001 15H5V6.851l2.219 2.774c.381.475 1.182.475 1.563 0L12 5.601l3.219 4.024z" />
+                </svg>
               </div>
               <div class="numbers__title">3 Million</div>
               <div class="numbers__sub--title">Downloads on all platforms</div>
             </div>
+
             <div class="numbers">
-              <div class="numbers__icon numbers__star--icon">
-                <BsStarFill />
-                <BsStarHalf />
-              </div>
+              <div class="numbers__icon numbers__star--icon">★★★★★</div>
               <div class="numbers__title">4.5 Stars</div>
-              <div class="numbers__sub--title">
-                Average ratings on iOS and Google Play
-              </div>
+              <div class="numbers__sub--title">Average ratings on iOS and Google Play</div>
             </div>
+
             <div class="numbers">
               <div class="numbers__icon">
-                <RiLeafLine />
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M21 3v2c0 9.627-5.373 14-12 14H5.243C5.08 19.912 5 20.907 5 22H3c0-1.363.116-2.6.346-3.732C3.116 16.974 3 15.218 3 13 3 7.477 7.477 3 13 3c2 0 4 1 8 0zm-8 2c-4.418 0-8 3.582-8 8 0 .362.003.711.01 1.046 1.254-1.978 3.091-3.541 5.494-4.914l.992 1.736C8.641 12.5 6.747 14.354 5.776 17H9c6.015 0 9.871-3.973 9.997-11.612-1.372.133-2.647.048-4.22-.188C13.627 5.027 13.401 5 13 5z" />
+                </svg>
               </div>
               <div class="numbers__title">97%</div>
-              <div class="numbers__sub--title">
-                Of Summarist members create a better reading habit
-              </div>
+              <div class="numbers__sub--title">Of Summarist members create a better reading habit</div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
     <section id="footer">
       <div class="container">
         <div class="row">
@@ -262,79 +243,87 @@
             <div class="footer__block">
               <div class="footer__link--title">Actions</div>
               <div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Summarist Magazine</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Cancel Subscription</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Help</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Contact us</a>
-                </div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Summarist Magazine</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Cancel Subscription</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Help</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Contact us</a></div>
               </div>
             </div>
+
             <div class="footer__block">
               <div class="footer__link--title">Useful Links</div>
               <div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Pricing</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Summarist Business</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Gift Cards</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Authors & Publishers</a>
-                </div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="./choose-plan.html">Pricing</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Summarist Business</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Gift Cards</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Authors &amp; Publishers</a></div>
               </div>
             </div>
+
             <div class="footer__block">
               <div class="footer__link--title">Company</div>
               <div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">About</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Careers</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Partners</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Code of Conduct</a>
-                </div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">About</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Careers</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Partners</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Code of Conduct</a></div>
               </div>
             </div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="./settings.html">Settings</a></div>
             <div class="footer__block">
               <div class="footer__link--title">Other</div>
               <div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Sitemap</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Legal Notice</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Terms of Service</a>
-                </div>
-                <div class="footer__link--wrapper">
-                  <a class="footer__link">Privacy Policies</a>
-                </div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Sitemap</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Legal Notice</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Terms of Service</a></div>
+                <div class="footer__link--wrapper"><a class="footer__link" href="#">Privacy Policies</a></div>
               </div>
             </div>
           </div>
+
           <div class="footer__copyright--wrapper">
-            <div class="footer__copyright">
-              Copyright &copy; 2023 Summarist.
-            </div>
+            <div class="footer__copyright">Copyright © 2023 Summarist.</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- AUTH MODAL -->
+    <div class="modal__overlay" id="authModal">
+      <div class="modal">
+        <div class="modal__header">
+          <button class="modal__close" id="closeModal" type="button" aria-label="Close authentication modal">✕</button>
+        </div>
+
+        <div class="modal__tabs">
+          <button class="modal__tab modal__tab--active" id="loginTab" type="button">Login</button>
+          <button class="modal__tab" id="signupTab" type="button">Register</button>
+        </div>
+
+        <!-- LOGIN -->
+        <div class="modal__form" id="loginForm">
+          <input id="loginEmail" type="email" placeholder="Email" class="modal__input" autocomplete="email" />
+          <input id="loginPassword" type="password" placeholder="Password" class="modal__input" autocomplete="current-password" />
+          <p class="modal__error" id="loginError" aria-live="polite"></p>
+
+          <button class="modal__btn" type="button">Login</button>
+          <button class="modal__btn modal__btn--secondary modal__btn--guest" type="button">Guest Login</button>
+          <button class="modal__text-btn" id="forgotPasswordBtn" type="button">Forgot Password?</button>
+          <button class="modal__btn modal__btn--google" id="googleLoginBtn" type="button">Continue with Google</button>
+        </div>
+
+        <!-- SIGNUP -->
+        <div class="modal__form is-hidden" id="signupForm">
+          <input id="registerEmail" type="email" placeholder="Email" class="modal__input" autocomplete="email" />
+          <input id="registerPassword" type="password" placeholder="Password" class="modal__input" autocomplete="new-password" />
+          <input id="registerConfirmPassword" type="password" placeholder="Confirm Password" class="modal__input" autocomplete="new-password" />
+          <p class="modal__error" id="registerError" aria-live="polite"></p>
+
+          <button class="modal__btn" type="button">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

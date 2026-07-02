@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./book.css" />
+    <title>Summarist • Book</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <a class="sidebar__logo" href="./index.html">
+          <img src="./assets/logo.png" alt="Summarist logo" />
+        </a>
+        <nav class="sidebar__links">
+          <a class="sidebar__link" href="./for-you.html">For you</a>
+          <a class="sidebar__link" href="#">My Library</a>
+          <a class="sidebar__link sidebar__link--disabled" href="#">Highlights</a>
+          <a class="sidebar__link" href="./search.html">Search</a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a class="sidebar__link" href="./settings.html">Settings</a>
+          <button class="sidebar__link sidebar__button" id="logoutBtn" type="button">Login</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar__input--wrapper">
+            <input class="topbar__input" type="text" id="topSearchInput" placeholder="Search for books" />
+          </div>
+        </header>
+
+        <div class="row">
+          <div class="container">
+            <div id="bookLoading" class="book__loading skeleton-book">
+              <div class="skeleton skeleton-title"></div>
+              <div class="skeleton skeleton-subtitle"></div>
+              <div class="skeleton skeleton-subtitle skeleton-w-40"></div>
+              <div class="skeleton-grid">
+                <div class="skeleton skeleton-card"></div>
+                <div class="skeleton skeleton-card"></div>
+                <div class="skeleton skeleton-card"></div>
+                <div class="skeleton skeleton-card"></div>
+              </div>
+              <div class="skeleton skeleton-paragraph"></div>
+              <div class="skeleton skeleton-paragraph"></div>
+            </div>
+
+            <section id="bookContent" class="inner__wrapper is-hidden">
+              <div class="inner__book">
+                <h1 class="inner-book__title" id="bookTitle"></h1>
+                <div class="inner-book__author" id="bookAuthor"></div>
+                <div class="inner-book__sub--title" id="bookSubtitle"></div>
+
+                <div class="inner-book__wrapper">
+                  <div class="inner-book__description--wrapper">
+                    <div class="inner-book__description">
+                      <div class="inner-book__overall--rating" id="bookRating"></div>
+                      <div class="inner-book__total--rating" id="bookTotalRating"></div>
+                    </div>
+                    <div class="inner-book__description">
+                      <div class="inner-book__duration" id="bookDuration"></div>
+                    </div>
+                    <div class="inner-book__description">
+                      <div class="inner-book__type" id="bookType"></div>
+                    </div>
+                    <div class="inner-book__description">
+                      <div class="inner-book__key--ideas" id="bookKeyIdeas"></div>
+                    </div>
+                  </div>
+
+                  <div class="inner-book__read--btn-wrapper">
+                    <button class="inner-book__read--btn" id="readBtn" type="button">Read</button>
+                    <button class="inner-book__read--btn" id="listenBtn" type="button">Listen</button>
+                  </div>
+
+                  <button class="inner-book__bookmark" id="bookmarkBtn" type="button">Add title to My Library</button>
+
+                  <h2 class="inner-book__secondary--title">What's it about?</h2>
+                  <div class="inner-book__tags--wrapper" id="bookTags"></div>
+                  <div class="inner-book__book--description" id="bookDescription"></div>
+
+                  <h2 class="inner-book__secondary--title">About the author</h2>
+                  <div class="inner-book__author--description" id="authorDescription"></div>
+                </div>
+              </div>
+
+              <div class="inner-book--img-wrapper">
+                <img id="bookImage" alt="Book cover" />
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="./book.js"></script>
+  </body>
+</html>

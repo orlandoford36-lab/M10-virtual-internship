@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./search.css" />
+    <title>Summarist • Search</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <a class="sidebar__logo" href="./index.html">
+          <img src="./assets/logo.png" alt="Summarist logo" />
+        </a>
+        <nav class="sidebar__links">
+          <a class="sidebar__link" href="./for-you.html">For you</a>
+          <a class="sidebar__link" href="#">My Library</a>
+          <a class="sidebar__link sidebar__link--disabled" href="#">Highlights</a>
+          <a class="sidebar__link sidebar__link--active" href="./search.html">Search</a>
+        </nav>
+        <div class="sidebar__bottom">
+          <a class="sidebar__link" href="./settings.html">Settings</a>
+          <button class="sidebar__link sidebar__button" id="logoutBtn" type="button">Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar__search">
+            <input id="searchInput" class="topbar__input" type="text" placeholder="Search for books by title or author" />
+          </div>
+        </header>
+
+        <div class="row">
+          <div class="container">
+            <h1 class="page__title">Search</h1>
+            <p class="page__subtitle">Find books by title or author.</p>
+            <div id="searchState" class="search__state">Type to search for books.</div>
+            <div id="results" class="results"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="./search.js"></script>
+  </body>
+</html>
