@@ -27,9 +27,18 @@ jobs:
 
       - name: Prepare site files
         run: |
+          shopt -s nullglob
           mkdir -p _site
-          cp -R assets auth firebase _site/
-          cp ./*.html ./*.css ./*.js _site/
+          for directory in assets auth firebase; do
+            if [ -e "$directory" ]; then
+              cp -R "$directory" _site/
+            fi
+          done
+
+          files=(./*.html ./*.css ./*.js)
+          if [ "${#files[@]}" -gt 0 ]; then
+            cp "${files[@]}" _site/
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
